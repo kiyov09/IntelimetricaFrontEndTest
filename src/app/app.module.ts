@@ -7,12 +7,16 @@ import { MaterialModule } from '@angular/material';
 import { MdListModule } from '@angular/material/list';
 
 import { AppComponent } from './app.component';
+import { RestaurantListComponent } from './restaurant-list-component/restaurant-list-component.component';
+
+import { RestaurantService } from './restaurant.service';
 
 import 'hammerjs';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    RestaurantListComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +25,7 @@ import 'hammerjs';
     MaterialModule.forRoot(),
     MdListModule.forRoot()
   ],
-  providers: [],
+  providers: [RestaurantService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

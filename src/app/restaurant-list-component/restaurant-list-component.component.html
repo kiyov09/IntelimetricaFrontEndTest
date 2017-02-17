@@ -1,0 +1,31 @@
+<style>
+.inline {
+    display: inline-block;
+}
+.flex {
+    display: flex;
+}
+.no-margin {
+    margin: 0px;
+}
+</style>
+
+<md-card>
+    <md-list>
+        <md-list-item *ngFor="let item of restaurants">
+            <h2 md-line class="no-margin">
+                <a href="/{{ item.id }}"> {{ item.name }} </a>
+            </h2>
+            <p md-line class="no-margin flex">
+                <md-icon>phone</md-icon>
+                <span>
+                    {{ item.contactInfo.phone }}
+                </span>
+                <span class="spacer"> </span>
+                <span>
+                    {{ item.rating }}
+                </span>
+            </p>
+        </md-list-item>
+    </md-list>
+</md-card>
